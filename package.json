@@ -1,12 +1,12 @@
 {
   "dependencies": {
-    "typescript": "^5.5.3"
+    "typescript": "^5.5.3",
+    "websocket": "^1.0.35"
   },
   "name": "realtimechat",
   "description": "",
   "version": "1.0.0",
   "main": "index.js",
-  "devDependencies": {},
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -20,5 +20,8 @@
   "bugs": {
     "url": "https://github.com/KudoC0nan/realtimechat/issues"
   },
-  "homepage": "https://github.com/KudoC0nan/realtimechat#readme"
+  "homepage": "https://github.com/KudoC0nan/realtimechat#readme",
+  "devDependencies": {
+    "@types/websocket": "^1.0.10"
+  }
 }
