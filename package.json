@@ -1,7 +1,8 @@
 {
   "dependencies": {
     "typescript": "^5.5.3",
-    "websocket": "^1.0.35"
+    "websocket": "^1.0.35",
+    "zod": "^3.23.8"
   },
   "name": "realtimechat",
   "description": "",
