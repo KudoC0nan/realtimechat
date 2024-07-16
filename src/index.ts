@@ -1,6 +1,6 @@
 #!/usr/bin/env node
 import {connection, server as WebSocketServer} from "websocket"
-import http from "http"
+import http from 'http'
 import { OutgoingMessage, SupportedMessage as OutgoingSupportedMessages } from "./messages/outgoingMessages"
 import { IncomingMessage, SupportedMessage } from "./messages/incommingMessages";
 import { UserManager } from "./UserManager";
@@ -21,8 +21,7 @@ server.listen(8080, function() {
 
 const wsServer = new WebSocketServer({
     httpServer: server,
-
-    autoAcceptConnections: false
+    autoAcceptConnections: true
 });
 
 function originIsAllowed(origin: string) {
