@@ -47,6 +47,7 @@ wsServer.on('request', function(request) {
         // Todo add rate limitting logic here 
         if (message.type === 'utf8') {
             try {
+                console.log("indie with msg" + message.utf8Data)
                 messageHandler(connection, JSON.parse(message.utf8Data));
             } catch(e) {
 
@@ -56,9 +57,11 @@ wsServer.on('request', function(request) {
 });
 
 function messageHandler(ws: connection, message: IncomingMessage) {
+    console.log("incoming message " + JSON.stringify(message))
     if (message.type == SupportedMessage.JoinRoom) {
         const payload = message.payload;
         userManager.addUser(payload.name, payload.userId, payload.roomId, ws);
+        console.log("user added")
     }
 
     if (message.type === SupportedMessage.SendMessage) {
@@ -73,7 +76,7 @@ function messageHandler(ws: connection, message: IncomingMessage) {
         if (!chat) {
             return;
         }
-
+        console.log("third")
         const outgoingPayload: OutgoingMessage= {
             type: OutgoingSupportedMessages.AddChat,
             payload: {

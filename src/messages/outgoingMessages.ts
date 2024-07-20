@@ -1,16 +1,15 @@
 
-
 export enum SupportedMessage {
-    AddChat = "ADD_CHAT",
+    AddChat =  "ADD_CHAT",
     UpdateChat = "UPDATE_CHAT",
 }
 
 type MessagePayload = {
-    roomId: string
-    message: string
-    name: string
-    upvotes: number
-    chatId: string
+    roomId: string;
+    message: string;
+    name: string;
+    upvotes: number;
+    chatId: string;
 }
 
 export type OutgoingMessage = {
